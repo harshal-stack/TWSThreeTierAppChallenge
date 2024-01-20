@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Exposing Port to the container
-EXPOSE 3000
+EXPOSE 3001
 
 # Specify the command to run when the container starts
 CMD [ "npm", "start" ]
