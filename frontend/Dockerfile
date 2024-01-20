@@ -7,13 +7,13 @@ RUN mkdir -p home/three_tier_app
 WORKDIR /home/three_tier_app
 
 # Copy the package.json and package-lock.json files to the container
-COPY package*.json ./
+COPY package*.json /home/three_tier_app
 
 # Install the application's dependencies inside the container
 RUN npm install
 
 # Copy the rest of the application code to the container
-COPY  /var/lib/jenkins/workspace/three_tier_app/frontend  .
+COPY . .
 
 # Exposing Port to the container
 EXPOSE 3001
