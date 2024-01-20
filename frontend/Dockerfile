@@ -1,13 +1,11 @@
 # Use the official Node.js 14 image as a base image
 FROM node:14
 
-RUN mkdir -p home/three_tier_app
 # Set the working directory in the container
-
-WORKDIR /home/three_tier_app
+WORKDIR /usr/src/app
 
 # Copy the package.json and package-lock.json files to the container
-COPY package*.json /home/three_tier_app
+COPY package*.json ./
 
 # Install the application's dependencies inside the container
 RUN npm install
@@ -16,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Exposing Port to the container
-EXPOSE 3001
+EXPOSE 3000
 
 # Specify the command to run when the container starts
 CMD [ "npm", "start" ]
