@@ -1,8 +1,6 @@
 # Use the official Node.js 14 image as a base image
 FROM node:14
 
-RUN mkidir usr/src/app
-
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
