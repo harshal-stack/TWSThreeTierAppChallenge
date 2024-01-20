@@ -13,7 +13,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of the application code to the container
-COPY . .
+COPY  /var/lib/jenkins/workspace/three_tier_app/frontend  .
 
 # Exposing Port to the container
 EXPOSE 3001
