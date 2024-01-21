@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the container
-COPY /var/lib/jenkins/workspace/three_tier_app/frontend/package*.json ./
+COPY package.json ./
 
 # Install the application's dependencies inside the container
 RUN npm install
